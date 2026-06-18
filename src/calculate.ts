@@ -21,6 +21,7 @@ import { analyzeChart } from "./analyze.ts";
 import type { SajuInput, SajuResult } from "./types.ts";
 
 export type * from "./types.ts";
+export { serializeSaju, type SajuData } from "./serialize.ts";
 
 export function calculateSaju(input: SajuInput): SajuResult {
   const normalizedInput = normalizeInput(input);
