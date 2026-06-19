@@ -47,6 +47,7 @@
     "perf": "node scripts/benchmark.mjs",
     "build": "npm run clean && npm run build:js && npm run build:types && npm run size",
     "prepack": "npm run build",
+    "prepare": "npm run build:js && npm run build:types",
     "sample": "tsx sample.ts",
     "test": "tsx --test tests/calculateSaju.test.ts"
   },
