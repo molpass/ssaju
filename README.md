@@ -15,7 +15,7 @@ LLM한테 먹이기 좋은 `toCompact()`랑 사람 눈에 예쁜 `toMarkdown()` 
 
 | | |
 |:--|:--|
-|  **작다** | gzip 15KB, 의존성 제로 |
+| **작다** | gzip 15KB, 의존성 제로 |
 | **빠르다** | 평균 0.04ms, 초당 24,000건 처리 |
 | **정확하다** | 한국천문연구원 음력 데이터와 천문학적 계산에 기반한 근사 공식 사용 및 절입시각(시/분) 기준 계산 |
 | **LLM-ready** | 사주 해석에 필요한 거의 모든 정보를 LLM friendly하게 950토큰으로 압축 제공 |
@@ -31,22 +31,22 @@ const result = calculateSaju({
   gender: "남",
 });
 
-result.toCompact();  // 🤖 LLM한테 던지세요
-result.toMarkdown(); // 👀 사람한테 보여주세요
+result.toCompact();  // LLM한테 던지세요
+result.toMarkdown(); // 사람한테 보여주세요
 ```
 
 ## API
 
 | 함수 | 하는 일 |
 |:--|:--|
-| `calculateSaju(input)` | 사주 분석 풀 패키지 🎁 |
-| `result.toCompact()` | LLM용 압축 텍스트 🤖 |
-| `result.toMarkdown()` | 사람용 Markdown 테이블 👀 |
-| `lunarToSolar(y, m, d, leap)` | 음력 → 양력 🌙→☀️ |
-| `solarToLunar(y, m, d)` | 양력 → 음력 ☀️→🌙 |
+| `calculateSaju(input)` | 사주 분석 풀 패키지 |
+| `result.toCompact()` | LLM용 압축 텍스트 |
+| `result.toMarkdown()` | 사람용 Markdown 테이블 |
+| `lunarToSolar(y, m, d, leap)` | 음력 → 양력 |
+| `solarToLunar(y, m, d)` | 양력 → 음력 |
 
 <details>
-<summary> 입력 옵션 전체 보기</summary>
+<summary>입력 옵션 전체 보기</summary>
 
 ```ts
 calculateSaju({
@@ -70,14 +70,14 @@ calculateSaju({
 
 </details>
 
-## 📊 출력 비교
+## 출력 비교
 
 | 포맷 | 토큰 수 | 언제 쓰나 |
 |:--|--:|--:|
-| `toCompact()` | ~950 | 🤖 LLM API 호출할 때 |
-| `toMarkdown()` | ~2,170 | 👀 UI에 예쁘게 보여줄 때 |
+| `toCompact()` | ~950 | LLM API 호출할 때 |
+| `toMarkdown()` | ~2,170 | UI에 예쁘게 보여줄 때 |
 
-## 🔍 출력 샘플
+## 출력 샘플
 
 <details>
 <summary><code>toCompact()</code> — LLM 최적화 압축 텍스트</summary>
@@ -293,7 +293,7 @@ calculateSaju({
 
 </details>
 
-## ⏱️ 벤치마크
+## 벤치마크
 
 <details>
 
